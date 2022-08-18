@@ -1,0 +1,220 @@
+:root{
+    --body-color-black: #202C36;
+    --color-white: #fff;
+    --color-items-black: #2B3844;
+    
+}
+
+/* nunito-sans-regular - latin_cyrillic */
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/nunito-sans-v12-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/nunito-sans-v12-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* nunito-sans-600 - latin_cyrillic */
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/nunito-sans-v12-latin_cyrillic-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/nunito-sans-v12-latin_cyrillic-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* nunito-sans-800 - latin_cyrillic */
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/nunito-sans-v12-latin_cyrillic-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/nunito-sans-v12-latin_cyrillic-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+body{
+    background-color: var(--color-white);
+    font-family: "Nunito Sans","Arial",sans-serif;
+}
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+.site-logo{
+    width: 135px;
+    color: #202C36;
+}
+.site-body__active{
+    background-color: var(--body-color-black);
+}
+.site-body__active  .site-logo{
+    color: var(--color-white);
+}
+.site-body__active .site-header{
+    background-color: #2B3844;
+}
+.site-header{
+    padding: 15px 0px;
+    box-shadow: 0px 2px 4px #0000000e;
+}
+.site-header__box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-header__dark{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 22px;
+    color: #111517;
+    cursor: pointer;
+}
+.site-header__dark::before{
+    content: "";
+    width: 12px;
+    height: 11px;
+    display: inline-block;
+    margin-right: 8px;
+    background-image: url(../images/months-logo.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.site-body__active .site-header__dark::before{
+    background-image: url(../images/months-logo-white.svg);
+}
+.site-body__active .site-header__dark{
+    color: var(--color-white);
+}
+.hero{
+    padding-top: 25px;
+}
+.hero__box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.hero__form{
+    width: 100%;
+    max-width: 343px;
+    margin-right: auto;
+}
+.hero__input{
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 30px;
+    width: 280px;
+    background-image: url(../images/icon-search-black.svg);
+    background-position: calc(50% - 125px) calc(50%);
+    background-repeat: no-repeat;
+    border: none;
+    box-shadow: 0px 2px 9px #0000000e;
+    border-radius: 5px;
+}
+.hero__input::placeholder{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #C4C4C4;
+}
+.site-body__active .hero__input{
+    background-color: var(--color-items-black);
+}
+.site-body__active .hero__input::placeholder{
+    color: var(--color-white);
+}
+.hero__select{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    margin-right: auto;
+    padding-top: 18px;
+    padding-right: 20px;
+    padding-left: 24px;
+    padding-bottom: 18px;
+    appearance: none;
+    background-image: url(../images/down.svg);
+    background-repeat: no-repeat;
+    background-position: calc(50% + 80px) calc(50%);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #111517;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 9px #0000000e;
+    border: none;
+    border-radius: 5px;
+}
+.site-body__active .hero__select{
+    background-color: var(--color-items-black);
+    color: var(--color-white);
+    background-image: url(../images/expand-more.svg);
+}
+
+.hero__lists{
+    padding-top: 100px;
+}
+.card-title{
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+    color: #111517;
+}
+.card{
+    border: none;
+    box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
+    border-radius: 5px;
+}
+.item{
+    margin-bottom: 15px;
+}
+.site-body__active .card{
+    background-color: var(--color-items-black);
+}
+.site-body__active .card-title{
+    color: var(--color-white);
+}
+.site-body__active .card-text{
+    color: var(--color-white);
+}
+@media only screen and (min-width: 720px) {
+    .site-logo{
+        width: 230px;
+        height: 33px;
+    }
+    .site-header__dark{
+        font-size: 16px;
+    }
+    .site-header__dark::before{
+        width: 20px;
+        height: 20px;
+    }
+    .hero__box{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .hero__input{
+        width: 310px;
+        background-position: calc(50% - 135px) calc(50%);
+    }
+    .hero__select{
+        margin: 0;
+        margin-top: 0;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .item-last{
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
